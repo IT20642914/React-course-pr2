@@ -1,21 +1,12 @@
 import React,{useState} from 'react'
-const initialGameBoard = [
-    [null,null,null],
-    [null,null,null],
-    [null,null,null]
-]
-const GameBoard = ({onSelectSquare,gameTurns}) => {
 
-    let gameBoard = initialGameBoard;
-    for(const turn of gameTurns){
-        const {square,player}=turn
-        const {row,col}=square
-        gameBoard[row][col]=player;
-    }
+const GameBoard = ({onSelectSquare,board}) => {
+
+
 
   return (
     <ol id='game-board'>
-        {gameBoard.map((row, rowIndex) => (
+        {board.map((row, rowIndex) => (
             <li key={rowIndex} >
                 <ol>
                     {row.map((playerSymbol,colIndex) => (
