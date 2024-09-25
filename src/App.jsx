@@ -1,4 +1,4 @@
-import Player from "./components/player/player";
+import Player from "./components/Players/Player";
 import GameBoard from "./components/GameBoard/GameBoard";
 import { useState } from "react";
 import Log from "./components/Log/Log";
