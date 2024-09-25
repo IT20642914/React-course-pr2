@@ -15,7 +15,7 @@ const derivActivePlayer = (gameTurns) => {
   }
   return currantPlayer;
 }
-const initialGameBoard = [
+const INITIAL_GAME_BOARD = [
   [null,null,null],
   [null,null,null],
   [null,null,null]
@@ -35,7 +35,7 @@ const deriveWinner = (gameBoard,players) => {
 ;
 }
 const deriveGameBoard = (gameTurns) => {
-  let gameBoard = [...initialGameBoard.map((row)=>[...row])];
+  let gameBoard = [...INITIAL_GAME_BOARD.map((row)=>[...row])];
   for(const turn of gameTurns){
       const {square,player}=turn
       const {row,col}=square
